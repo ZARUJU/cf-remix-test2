@@ -1,0 +1,5 @@
+-- Migration number: 0001 	 2024-05-24T01:40:21.626Z
+CREATE TABLE `users` (
+  `id` INTEGER PRIMARY KEY AUTOINCREMENT,
+  `username` TEXT NOT NULL
+);
