@@ -12,8 +12,8 @@ type User = {
 };
 
 export async function loader({ context }: LoaderFunctionArgs) {
-  const env = context.env as Env;
-
+  const env = context.cloudflare.env as Env;
+  console.log(context.cloudflare.env.DB)
   const { results } = await env.DB.prepare("SELECT * FROM users").all<User>();
 
   return json({
